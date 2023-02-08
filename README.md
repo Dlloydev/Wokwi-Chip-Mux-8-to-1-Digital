@@ -32,7 +32,7 @@ To use this chip in your project, include it as a dependency in your `diagram.js
 
 ```json
   "dependencies": {
-    "chip-mux-8-to-1-digital": "github:Dlloydev/Wokwi-Chip-Mux-8-to-1-Digital@1.0.0"
+    "chip-mux-8-to-1-digital": "github:Dlloydev/Wokwi-Chip-Mux-8-to-1-Digital@1.0.1"
   }
 ```
 
