@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "author": "Dlloydev",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "chip-mux-8-to-1-digital",
+      "id": "mux-8-to-1-digital1",
+      "top": -171.78,
+      "left": -235.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -168.85,
+      "left": -105.6,
+      "attrs": { "value": "330" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -205.2,
+      "left": -43.8,
+      "attrs": { "color": "red", "flip": "1" }
+    },
+    { "type": "wokwi-gnd", "id": "gnd1", "top": -153.6, "left": -29.4, "attrs": {} },
+    {
+      "type": "wokwi-dip-switch-8",
+      "id": "sw1",
+      "top": -160.3,
+      "left": -327.9,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-slide-switch",
+      "id": "sw2",
+      "top": -183.1,
+      "left": -394.8,
+      "rotate": 270,
+      "attrs": {}
+    },
+    { "type": "wokwi-gnd", "id": "gnd2", "top": -144, "left": -365.4, "attrs": {} },
+    { "type": "wokwi-vcc", "id": "vcc1", "top": -210.44, "left": -364.8, "attrs": {} }
+  ],
+  "connections": [
+    [ "mux-8-to-1-digital1:OUT", "r1:1", "green", [ "v0", "h21.01" ] ],
+    [ "r1:2", "led1:A", "green", [ "v0" ] ],
+    [ "gnd1:GND", "led1:C", "black", [ "v0" ] ],
+    [ "sw1:1b", "mux-8-to-1-digital1:D1", "green", [ "h0" ] ],
+    [ "sw1:2b", "mux-8-to-1-digital1:D2", "green", [ "h0" ] ],
+    [ "sw1:3b", "mux-8-to-1-digital1:D3", "green", [ "h0" ] ],
+    [ "sw1:4b", "mux-8-to-1-digital1:D4", "green", [ "h0" ] ],
+    [ "sw1:5b", "mux-8-to-1-digital1:D5", "green", [ "h0" ] ],
+    [ "sw1:6b", "mux-8-to-1-digital1:D6", "green", [ "h0" ] ],
+    [ "sw1:7b", "mux-8-to-1-digital1:D7", "green", [ "h0" ] ],
+    [ "sw1:8b", "mux-8-to-1-digital1:D8", "green", [ "v0" ] ],
+    [ "sw2:1", "gnd2:GND", "black", [ "h0" ] ],
+    [ "vcc1:VCC", "sw2:3", "red", [ "v0" ] ],
+    [ "sw2:2", "sw1:1a", "green", [ "h0" ] ],
+    [ "sw1:1a", "sw1:2a", "green", [ "h-9.6", "v9.6" ] ],
+    [ "sw1:2a", "sw1:3a", "green", [ "h-9.6", "v9.6" ] ],
+    [ "sw1:3a", "sw1:4a", "green", [ "h-9.6", "v9.6" ] ],
+    [ "sw1:4a", "sw1:5a", "green", [ "h-9.6", "v9.6" ] ],
+    [ "sw1:5a", "sw1:6a", "green", [ "h-9.6", "v9.6" ] ],
+    [ "sw1:6a", "sw1:7a", "green", [ "h-9.6", "v9.6" ] ],
+    [ "sw1:7a", "sw1:8a", "green", [ "h-9.6", "v9.6" ] ]
+  ],
+  "dependencies": { "chip-mux-8-to-1-digital": "github:Dlloydev/Wokwi-Chip-Mux-8-to-1-Digital@1.0.0" }
+}
